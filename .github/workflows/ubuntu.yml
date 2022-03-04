@@ -1,0 +1,16 @@
+name: basic ubuntu test
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    # ubuntu  :( I need alpine :( 
+    runs-on: ubuntu-latest
+
+    steps:
+    - run: apt install -y python3-pytest
+    - run: pytest
