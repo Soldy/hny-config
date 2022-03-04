@@ -1,19 +1,25 @@
 import json
 import copy
 
-__config = {};
+
+class configClass:
+    def __init__(self):
+        self._config = {}
+    def init(self, file_name):
+         with open(file_name, 'r') as config_file:
+             self._config=json.load(config_file)
+    def all(self):
+        return copy.deepcopy(self._config)
+    def get(self, name):
+        return copy.deepcopy(self._config[name])
+
+config = configClass()
 
 def init(file_name):
-    with open(file_name, 'r') as config_file:
-         __config=json.loads(config_file.read())
-
+    config.init(file_name)
 
 def all():
-    return copy.deepcopy(__config)
+    return config.all()
 
 def get(name):
-    return copy.deepcopy(__config[name])
-
-def whiteList():
-    return copy.deepcopy(__white_list)
-
+    return config.get(name)
