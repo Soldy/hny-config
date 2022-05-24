@@ -1,5 +1,5 @@
 import pytest
-import config
+import hnyconfig as config
 
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
 def test_init():

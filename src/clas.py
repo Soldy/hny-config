@@ -13,13 +13,3 @@ class configClass:
     def get(self, name):
         return copy.deepcopy(self._config[name])
 
-config = configClass()
-
-def init(file_name):
-    config.init(file_name)
-
-def all():
-    return config.all()
-
-def get(name):
-    return config.get(name)

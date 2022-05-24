@@ -5,10 +5,11 @@ with open("README.md", "r") as readme:
 
 setup(
     name='hny-config',
-    version='0.0.1',
+    version='0.1.0',
     description='',
-    py_modules=['hny-config'],
-    package_dir={'':'src'},
+    py_modules=['hnyconfig'],
+    package_dir={'hnyconfig':'src'},
+    packages=['hnyconfig'],
     install_requires=[],
     extras_require={
         "dev":[
