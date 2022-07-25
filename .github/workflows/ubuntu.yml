@@ -27,9 +27,7 @@ jobs:
         run: pwd
       - name: env
         run: env
-      - name: Install development deependencies
-        run: pip3 install -e .[dev]
-      - name: install pytest
-        run: pip3 install hny-config
+      - name: Install pytest
+        run: pip3 install pytest
       - name: Run pytest
         run: pytest
